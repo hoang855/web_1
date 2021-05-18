@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <!-- <form name="myForm" onsubmit="return validateForm()">Phone Number:
+        <input type="text" id="phone">
+        <br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+
+    <input type="text" id="phone hello" >
+    <button onclick="checkPhone()">click</button>
+
+    <script>
+        // function validateForm() {
+        //     return checkPhone();
+        // }
+
+        function checkPhone() {
+
+            var hello = document.getElementById("phone").value;
+
+            var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+            if (phone.match(phoneNum)) {
+                alert("đúng")
+                return true;
+            } else {
+                alert("sai")
+                return false;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

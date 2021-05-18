@@ -10,16 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/style_2.css">
 
 </head>
 <body>
 
     <div id="div_header">
         <div id="logo"></div>
-        
         <div class="div_list">
             <ul id="list_trang_chu">
-                <!-- <li class="trangchu1"><a href="" id="colora">Bán Chạy</a></li>
+                <li class="trangchu1"><a href="" id="colora">Bán Chạy</a></li>
                 <li class="trangchu1">
                     <div class="trangchu1_con">
                         <a href="" id="colora_1">SALE 50% <i class="far fa-angle-down icon_arrow" id="r3"></i></a>
@@ -32,7 +32,6 @@
                 <li class="trangchu1">
                     <div class="trangchu1_con">
                         <a href="" id="colora_2">Thời Trang Nam <i class="far fa-angle-down icon_arrow" id="r2"></i></a>
-                        
                         <div id="trang_2">
                             <div class="container_2_">
                                 <div class="trang_2_com"></div>
@@ -99,33 +98,256 @@
                     </div>
                 </li>
                 <li class="trangchu1"><a href="" id="colora_4">Hệ Thống Cửa Hàng</a></li>
-                <li class="trangchu1"><a href="" id="colora_5">Blog</a></li> -->
+                <li class="trangchu1"><a href="" id="colora_5">Blog</a></li>
             </ul>
         </div>
-
         <div class="div_cart">
             <div id="cart_">
-                <i class="fal fa-search cart_1"></i></i>
-                <i class="fal fa-user-alt cart_1"></i></i>
-                <i class="fal fa-shopping-cart cart_1"></i>
+                <i class="fal fa-search cart_1" onclick="hien_tim_kiem()"></i></i>
+                <div id="hyt">  
+                    <i class="fal fa-user-alt cart_1"></i></i>
+                    <div id="fom_account">
+                        <span class="fom_account_1"></span>
+                    </div>
+                </div>
+                <i class="fal fa-shopping-cart cart_1" onclick="container_cart()"></i>
             </div>
         </div>
     </div>
 
-    <div id="banner_img">
-        <img src="https://ninomaxx.com.vn/wp-content/uploads/2021/02/BANNER-WEB-1.png" alt=""  class="img_anh" onclick="chuyenbanner()">
-        <img src="https://ninomaxx.com.vn/wp-content/uploads/2021/02/BANNER-WEB-3.png" alt="" class="img_anh" onclick="chuyenbanner()">
-        <img src="https://ninomaxx.com.vn/wp-content/uploads/2021/02/BANNER-WEB-2.png" alt="" class="img_anh" onclick="chuyenbanner()">
-    </div>
-    
-    
 
-    <div id="main">
-        <div class="main_product">
-
+    <div id="cotainer_body">
+        <div id="banner_img">
+            <img src="https://dichvudangtinraovat.com/images/photos/dich-vu-dang-tin-ban-hang-thoi-trang.jpg" alt=""  class="img_anh" onclick="chuyenbanner()">
+            <img src="./imag/banner/Untitled-4.png" alt="" class="img_anh" onclick="chuyenbanner()">
+            <img src="./imag/banner/Untitled-1.png" alt="" class="img_anh" onclick="chuyenbanner()">
         </div>
     </div>
 
+    
+
+
+    <div id="container_cart">
+        <div class="_cart_1">
+            <div class="_cart_1_top">
+                <h5>GIỎ HÀNG CỦA BẠN</h5>
+            </div>
+        </div>
+    </div> 
+    
+    
+
+
+    <div id="pham_cap">
+        <div class="pham_cap_con">
+            <div class="pham_cap_con_main sapm1"></div>
+            <div class="pham_cap_con_main sapm2"></div>
+        </div>
+    </div>
+    <div id="container_chi_tiet_san_pham">
+        <div id="chi_tiet_san_pham_main">
+            <div class="chi_tiet_san_pham_main_row row_1">
+                <div class="img_anh_1">
+                    <ul>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_1_69885835e0ce4e4f984d8bc1cdc8b634.jpg" alt="" onclick="xem_anh_img('SP1')" id="SP1"></li>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_4_ed5c95446b654a1f8d5235748af2b324.jpg" alt="" onclick="xem_anh_img('SP2')" id="SP2"></li>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_6_e8964a4d8d9d404890f523cb6a227da4.jpg" alt="" onclick="xem_anh_img('SP3')" id="SP3"></li>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_3_b692d3bf63bf438184b12b0b4d6d2100.jpg" alt="" onclick="xem_anh_img('SP4')" id="SP4"></li>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_2_53b89be91b2d41fa9f9a8a33fd3d1897.jpg" alt="" onclick="xem_anh_img('SP5')" id="SP5"></li>
+                        <li class="img_nho"><img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_5_c8cf9c5f9cbc4136a34f18009c609865.jpg" alt="" onclick="xem_anh_img('SP6')" id="SP6"></li>
+                    </ul>
+                </div>
+                <div class="img_anh_2">
+                    <img src="https://product.hstatic.net/1000197303/product/pro_xanh_duong_1_69885835e0ce4e4f984d8bc1cdc8b634.jpg" alt="" id="anh_img_main">
+                </div>
+            </div>
+            <div class="chi_tiet_san_pham_main_row row_2">
+                <div class="thong_tinh_san_pham">
+                    <div class="thong_tinh_san_pham_top">
+                        <h5>ÁO SƠ MI NỮ</h5>
+                        <span class="gai_ca">
+                            850,000
+                            <span class="vnd_">đ</span>
+                        </span>
+                        <p class="ma_san_pham">Mã sản phẩn: 1811080</p>
+                        <div class="thong_tinh_san_pham_top_main">
+                            <span class="chon_sp">
+                                
+                                <div class="chon_size">
+                                    <p>Size</p>
+                                    <div class="color_sp"><button class="btn">S</button></div>
+                                    <div class="color_sp"><button class="btn">M</button></div>
+                                    <div class="color_sp"><button class="btn">L</button></div>
+                                    <div class="color_sp"><button class="btn">XL</button></div>
+                                </div>
+                                
+                                <div class="chon_size">
+                                    <p>Color</p>
+                                    <div class="color_sp"><button class="btn mau_sp_1"></button></div>
+                                    <div class="color_sp"><button class="btn mau_sp_2"></button></div>
+                                    <div class="color_sp"><button class="btn mau_sp_3"></button></div>
+                                </div>
+                            </span>
+                            <div class="so_luon_mua_hang">
+                                <span class="chon_so_luon"><p>Chọn số lượn:</p></span>
+                                <input type="button" value="-" class="main">
+                                <input type="" class="number_inp">
+                                <input type="button" value="+" class="main">
+                                <div class="mua_hang_">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                    <p>Xem vị trí cửa hàng</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="thong_tinh_san_pham_top_but">
+                        <button class="btn_muahng them_">Thêm vào giỏ</button>
+                        <button class="btn_muahng mua_">Mua hàng</button>
+                    </div>
+                    <div class="thong_tinh_san_pham_top_huong_dan_mua_hang">
+                        <div  class="thong_tinh_giao_hang">
+                            <i class="fal fa-truck-container"></i>
+                            <p>Miễn phí vận chuyển</p>
+                        </div>
+                       
+                        <p>
+                           <br> Khu vực TP HCM: từ 300.000đ
+                           <br> Các khu vực khác: từ 500.000đ
+                           <br> Mua thêm sản phẩm để được freeship nhé khách ơi!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <div id="account" onclick="anaccount()"></div>
+    <div id="ttttt">
+        <div id="account_main">
+            <div class="account_main_img">
+                <img src="./imag/banner/img_1.png" alt="">
+            </div>
+            <div class="account_main_login">
+                <i class="fal fa-times" onclick="anaccount()"></i>
+                <div id="di">
+                    <div class="login_registration">
+                        <h6 id="T_3">Đăng Nhập</h6>
+                        <h6 id="T_4">Đăng Ký</h6>
+                    </div>
+                    <div class="account_main_login_main">
+                        <div class="login_main_input" id="dang_ky">
+                            <div class="main_input">
+                                <input type="text" required id="username_1">
+                                <div class="main_input_row"></div>
+                                <label>Tên Đăng Nhập</label>
+                            </div>
+                            <div class="main_input">
+                                <input type="text" required id="gmail_DT">
+                                <div class="main_input_row"></div>
+                                <label>Email</label>
+                            </div>
+                            <div class="main_input">
+                                <input type="text" required id="password_1">
+                                <div class="main_input_row"></div>
+                                <label>Mật Khẩu</label>
+                            </div>
+                            <div class="main_input">
+                                <input type="text" required id="password_2">
+                                <div class="main_input_row"></div>
+                                <label>Nhập Lại Mật Khẩu</label>
+                            </div>
+                            <div class="buton">
+                                <button class="butoon_login_registration" onclick="danh_ky()">
+                                    <h6>Đăng Ký</h6>
+                                </button> 
+                            </div>
+                            <div class="loi">
+                                <p class="ppploi" id="p_1">Bạn phải nhập Tài khoản</p>
+                                <p class="ppploi" id="p_2">Gmail Hoặc ĐT không được để trống</p>
+                                <p class="ppploi" id="p_3">Mật Khẩu không được để trống</p>
+                                <p class="ppploi" id="p_4">Mật Khẩu Không Khớp</p>
+                                <p class="ppploi" id="p_5">Tài khoản đăng Nhập Đã Tồn Tại</p>
+                                <p class="ppploi" id="p_6">Tên đăng nhập không được để trống</p>
+                                <p class="ppploi" id="p_7">Gmail không hộp lệ</p>
+                            </div>
+                        </div>
+                        <div class="login_main_input" id="dang_nhap">
+                            <div class="main_input">
+                                <input type="text" required id="username">
+                                <div class="main_input_row"></div>
+                                <label>Tên Đăng Nhập</label>
+                            </div>
+                            <div class="main_input">
+                                <input type="password" required id="password">
+                                <div class="main_input_row"></div>
+                                <label>Mật Khẩu</label>
+                            </div>
+                            <div class="buton">
+                                <button class="butoon_login_registration" onclick="validate()">
+                                    <h6>Đăng Nhập</h6>
+                                </button> 
+                            </div>
+                            <div class="loi">
+                                <p class="ppploi" id="p_51">Sai Mật Khẩu Hoặc Tên Đăng Nhập</p>
+                                <h6>Quên mật khẩu</h6>
+                            </div>
+                            <div class="login_khac">
+                                <span class="login_khac_con">HOẶC</span>
+                                <div class="login_khac_con_1 facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <p>Đăng Nhập Bằng Facebook</p>
+                                </div>
+                                <div class="login_khac_con_1 google">
+                                    <i class="fab fa-google"></i>
+                                    <p>Đăng Nhập Bằng Google</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login_registration_2">
+                        <p onclick="hide_sign_in_registration('dang_nhap', 'dang_ky', 'T_1', 'T_2', 'T_3', 'T_4')" id="T_1">Đăng Nhập</p>
+                        <p onclick="hide_sign_in_registration('dang_ky', 'dang_nhap', 'T_2', 'T_1', 'T_4', 'T_3')" id="T_2">Đăng Ký</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="container_san_pham"></div> -->
+
+
+
+    <div id="container_DXTk" onclick="DNTC()">
+        <div id="DNTC">
+            <i class="fal fa-check-circle"></i>
+            <h6 class="shasid" id="ksjj">Đăng Nhập Thành Công</h6>
+            <h6 class="shasid" id="ksdka">Đăng Ký Thành Công</h6>
+            <div class="fmfmf">
+                <button>OK</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="container_account" onclick="anaccount()"></div>
+    <div id="tim_kiem"></div>
+    <div id="gototop_1" onclick="gototop()">
+        <i class="fal fa-chevron-circle-up"></i>
+    </div>
+    <div class="chat_facebook">
+        <i class="fab fa-facebook-messenger"></i>
+    </div>
+
+    <div id="container_body___1"></div>
+
+
+    <script src="./javas/app.js"></script>
+    <script src="./javas/fff.js"></script>
     <script src="./javas/main.js"></script>
 </body>
 </html>

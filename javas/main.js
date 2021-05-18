@@ -17,7 +17,8 @@ window.onscroll = function(){
     let r3 = document.getElementById("r3");
     let r2 = document.getElementById("r1");
     let r1 = document.getElementById("r2");
-    // let gototop = document.getElementById("gototop_1");
+    let gototop = document.getElementById("gototop_1");
+    let fom_account_ = document.getElementById("fom_account");
     if ( document.body.scrollTop > 10 || document.documentElement.scrollTop > 10 ){
         header.style.height = "80px";
         header.style.boxShadow = "0px 0px 3px 0.5px rgb(189, 189, 189)";
@@ -26,6 +27,8 @@ window.onscroll = function(){
         leit.style.lineHeight = "90px";
         cart_.style.marginTop ="30px"
         header.style.transition = "all 0.5s ease-out";
+
+        fom_account_.style.top = "80px";
 
 
         logo___1.style.display ="none";
@@ -47,14 +50,16 @@ window.onscroll = function(){
         trang_2.style.top = "80px";
         trang_3.style.top = "80px";
 
-        // gototop.style.display = "block";
+        gototop.style.display = "block";
     }else{
         header.style.height = "100px";
-        leit.style.lineHeight = "110px";
         header.style.boxShadow ="";
         header.style.color = "";
         header.style.backgroundColor = "";
+        leit.style.lineHeight = "110px";
         cart_.style.marginTop ="";
+
+        fom_account_.style.top = "";
 
         logo___1.style.display ="";
         logo___2.style.display ="";
@@ -76,34 +81,16 @@ window.onscroll = function(){
         trang_2.style.top = "100px";
         trang_3.style.top = "100px";
 
-        // gototop.style.display = "none";
+        gototop.style.display = "none";
     }
 }
-
-// function gototop(){
-//     let timer = setInterval( function(){
-//         document.documentElement.scrollTop-=20;
-//         if (document.documentElement.scrollTop <= 0) {
-//            clearInterval(timer); 
-//         }
-//     }, 5);
-// }
-
-
-
-
-
- 
-// header_container();
-
-
 
 
 
 // banner
 let banner = document.getElementsByClassName("img_anh");
 let chuyenanh = 0;
-function anh_img(n){
+function anh_img(n){ 
     for (let i = 0; i < banner.length; i++) {
         banner[i].style.display = "none";
     }
@@ -126,23 +113,11 @@ setInterval(function(){
 
 // product
 
-let cantainer_product = document.getElementById("main");
-// let header = document.getElementById("div_header");
+// let cantainer_product = document.getElementById("main");
 
-function product_Number_one(){
-    cantainer_product.style.display ="block";
-    // header.style.position ="";
-}
-
-
-// containar_header
-// function header_container(){
-//     document.getElementById("div_header").innerHTML+=`
-//     <div id="logo"></div>
-//     `
+// function product_Number_one(){
+//     cantainer_product.style.display ="block";
 // }
-// header_container();
-
 
 function img_logo(logo_1, class_1){
     document.getElementById("logo").innerHTML+=`
@@ -166,73 +141,18 @@ for ( let logo_img of logo_imgs ){
 }
 
 
-
-
-// lest
-
-function list_(lest_1, icon, class_1 ){
-    document.getElementById("list_trang_chu").innerHTML+=`
-    
-    <li class="trangchu1">
-        <div class="trangchu1_con">
-            <a href="" id="colora_2">` + lest_1 + `<i class="` + icon + `" id="r2"></i></a>
-            <div id="trang_2">
-                <div class="container_2_">
-                    <div class="trang_2_com"></div>
-                    <div class="trang_2_com">
-                        <h6>ÁO Phong</h6>
-                        <p>ÁO THUN</p>
-                        <p>ÁO THUN POLO</p>
-                        <p>ÁO DỆT</p>
-                        <p>ÁO KHOÁC</p>
-                        <p>ÁO SƠ MI</p>
-                    </div>
-                    <div class="trang_2_com">
-                        <h6>QUẦN</h6>
-                        <p>QUẦN JEANS</p>
-                        <p>QUẦN SHORT</p>
-                        <p>QUẦN KAKI</p>
-                        <p>QUẦN TÂY</p>
-                        <p> QUẦN DÀIHOT</p>
-                    </div>
-                    <div class="trang_2_com"></div>
-                    <div class="trang_2_com"></div>
-                    <div class="trang_2_com"></div>
-                </div>
-            </div>
-        </div>
-    </li>
-    `
+function container_cart(){
+    let cart = document.getElementById("container_cart");
+    let banner_img = document.getElementById("banner_img");
+    cart.style.display = "block";
+    banner_img.style.display = "none";
 }
-let op_lest_s =[
-    {
-        lest_1: "Bán Chạy",
-    },
-    {
-        lest_1: "SALE 50%",
-        icon: "far fa-angle-down icon_arrow",
-        class_1: "trang_2"
-    },
-    {
-        lest_1: "Thời trang nam",
-        icon: "far fa-angle-down icon_arrow",
-    },
-    {
-        lest_1: "Thời trang nữ",
-        icon: "far fa-angle-down icon_arrow",
-    },
-    {
-        lest_1: "hệ thông cửa hàng",
-    },
-    {
-        lest_1: "blog",
-    },
-]
 
-for ( op_lest_ of op_lest_s ){
-    list_(
-        op_lest_.lest_1,
-        op_lest_.icon
-    )
-    
+function gototop(){
+    let timer = setInterval( function(){
+        document.documentElement.scrollTop-=20;
+        if (document.documentElement.scrollTop <= 0) {
+           clearInterval(timer); 
+        }
+    }, 5);
 }
